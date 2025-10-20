@@ -1,0 +1,3 @@
+#ignore files lo upoloaded by the IDE
+.vscode/
+.idea/
