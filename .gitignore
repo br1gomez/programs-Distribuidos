@@ -1,3 +1,7 @@
 #ignore files lo upoloaded by the IDE
 .vscode/
 .idea/
+
+#ignore executeble files
+*.exe
+*.out
