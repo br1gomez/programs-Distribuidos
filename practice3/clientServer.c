@@ -11,20 +11,6 @@
 #define PORT 3000
 #define TAM_MAX 1024
 
-int main(int argc, char *argv[]){
-  if(argc == 2 && strcmp(argv[1], "server") == 0){
-    modo_servidor();
-  } else if (argc == 3 && strcmp(argv[1], "client") == 0){
-    char *ip_servidor = argv[2];
-    modo_cliente(ip_servidor);
-  }else {
-    fprintf(stderr, "Modo de uso:\n");
-    fprintf(stderr, " Para modo servidor: %s server\n", argv[0]);
-    fprintf(stderr, " Para modo cliente: %s client ipServidor\n", argv[0]);
-  }
-  return 0;
-}
-
 void modo_cliente(char *ip_servidor){
   printf("Programa en modo cliente\n");
   int desc_socket, tam_struct;
@@ -111,3 +97,18 @@ void modo_servidor(){
   printf("SERVER: mensaje enviado, cerrando el servidor. \n");
   close(desc_socket);
 }
+
+int main(int argc, char *argv[]){
+  if(argc == 2 && strcmp(argv[1], "server") == 0){
+    modo_servidor();
+  } else if (argc == 3 && strcmp(argv[1], "client") == 0){
+    char *ip_servidor = argv[2];
+    modo_cliente(ip_servidor);
+  }else {
+    fprintf(stderr, "Modo de uso:\n");
+    fprintf(stderr, " Para modo servidor: %s server\n", argv[0]);
+    fprintf(stderr, " Para modo cliente: %s client ipServidor\n", argv[0]);
+  }
+  return 0;
+}
+
