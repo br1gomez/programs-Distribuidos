@@ -5,3 +5,6 @@
 #ignore executeble files
 *.exe
 *.out
+
+practice3/*.exe
+practice3/*.out
