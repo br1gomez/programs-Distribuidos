@@ -1,0 +1,1 @@
+este es un archivo que se envia desde el cliente hasta un servidor

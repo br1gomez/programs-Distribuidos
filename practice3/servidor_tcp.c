@@ -42,7 +42,7 @@ int main() {
 
     // Listen 
     listen(sock_fd, 5);
-    printf("SERVER (TCP): Escuchando conexiones...\n");
+    printf("SERVER TCP: Escuchando conexiones\n");
 
     // Accept 
     new_sock = accept(sock_fd, (struct sockaddr *)&cli_addr, &cli_len);
